@@ -20,9 +20,13 @@ SOURCES += \
     src/components.cpp
 
 HEADERS += \
-    headers/components.h
+    headers/components.h \
+    headers/settings.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc
